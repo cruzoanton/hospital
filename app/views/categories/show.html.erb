@@ -1,0 +1,11 @@
+<h1>Category name:</h1>
+<p><%= @category.name %></p>
+<li><%= link_to "Edit", edit_category_path(@category) %>
+  <%= link_to "Destroy", category_path(@category),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></li>
+<h2>Doctors:</h2>
+
+<%= render @category.doctors %>
+
+

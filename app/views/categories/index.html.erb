@@ -1,0 +1,10 @@
+<h1>Category list</h1>
+<ul>
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.name_category, category_path(category) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to '<button type="button">New Category</button>'.html_safe, new_category_path %>

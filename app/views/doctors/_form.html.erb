@@ -1,0 +1,16 @@
+<%= form_with model: @doctor do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :surname %><br>
+    <%= form.text_field :surname %>
+  </p>
+  <p>
+    <%= form.collection_select(:category, Category.all, :id, :name) %>
+     </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
